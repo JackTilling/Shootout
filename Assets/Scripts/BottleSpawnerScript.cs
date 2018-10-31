@@ -33,7 +33,7 @@ public class BottleSpawnerScript : MonoBehaviour {
 	}
 
 	void GetForces() {
-		xForce = Random.Range(170,230);
-		yForce = Random.Range(90,130);
+		xForce = Random.Range(150,240);
+		yForce = Random.Range(70,150);
 	}
 }
