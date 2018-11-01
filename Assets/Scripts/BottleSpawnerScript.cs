@@ -11,6 +11,7 @@ public class BottleSpawnerScript : MonoBehaviour {
 
 	private int xForce;
 	private int yForce;
+	private int rotate;
 
 	// Use this for initialization
 	void Start () {
@@ -25,9 +26,11 @@ public class BottleSpawnerScript : MonoBehaviour {
 	}
 
 	void SpawnBottle() {
-		bottle = Instantiate(bottleObject, transform.position, Quaternion.identity);
-		rb2D = bottle.GetComponent<Rigidbody2D>();
 		GetForces();
+
+		bottle = Instantiate(bottleObject, transform.position, Quaternion.AngleAxis(rotate, Vector3.forward));
+		rb2D = bottle.GetComponent<Rigidbody2D>();
+		
 		rb2D.isKinematic = false;
 		rb2D.AddForce(new Vector2(xForce,yForce));
 	}
@@ -35,5 +38,6 @@ public class BottleSpawnerScript : MonoBehaviour {
 	void GetForces() {
 		xForce = Random.Range(150,240);
 		yForce = Random.Range(70,150);
+		rotate = Random.Range(-35,35);
 	}
 }
