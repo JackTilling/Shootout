@@ -8,7 +8,7 @@ public class BottleScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("LOADED BOTTLE");
+		GameObject.Find("GameManager").GetComponent<GameManagerScript>().bottlesThrown++;
 		destroyed = false;
 	}	
 

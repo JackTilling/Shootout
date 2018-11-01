@@ -203,7 +203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076947137355106, guid: 455b19428482745cc931da873a4f42bd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.85
+      value: -5.22
       objectReference: {fileID: 0}
     - target: {fileID: 4076947137355106, guid: 455b19428482745cc931da873a4f42bd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -227,7 +227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076947137355106, guid: 455b19428482745cc931da873a4f42bd, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114277187560505996, guid: 455b19428482745cc931da873a4f42bd,
         type: 2}
@@ -255,7 +255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076947137355106, guid: 455b19428482745cc931da873a4f42bd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 4076947137355106, guid: 455b19428482745cc931da873a4f42bd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -377,7 +377,7 @@ RectTransform:
   m_Children:
   - {fileID: 1038860421}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -594,7 +594,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924102049
 GameObject:
@@ -650,3 +650,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCount: 0
+  bottlesThrown: 0

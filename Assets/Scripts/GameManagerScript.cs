@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManagerScript : MonoBehaviour {
 
 	public int scoreCount = 0;
+	public int bottlesThrown = 0;
 	
 	private Text hitsUI;
 
@@ -17,5 +18,6 @@ public class GameManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		hitsUI.text = "HITS = " + scoreCount.ToString();
+		Debug.Log(bottlesThrown);
 	}
 }

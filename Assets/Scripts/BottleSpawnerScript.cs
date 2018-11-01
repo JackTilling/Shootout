@@ -12,32 +12,43 @@ public class BottleSpawnerScript : MonoBehaviour {
 	private int xForce;
 	private int yForce;
 	private int rotate;
+	private float randTime;
 
 	// Use this for initialization
 	void Start () {
 		// SpawnBottle();
+		StartCoroutine(StartCountdown(3.0f));
 	}
 
 	private void Update() {
-		if (Input.GetKeyDown("space"))
-        {
-            SpawnBottle();
-        }
 	}
 
 	void SpawnBottle() {
-		GetForces();
+		GetRandomValues();
 
 		bottle = Instantiate(bottleObject, transform.position, Quaternion.AngleAxis(rotate, Vector3.forward));
 		rb2D = bottle.GetComponent<Rigidbody2D>();
 		
 		rb2D.isKinematic = false;
 		rb2D.AddForce(new Vector2(xForce,yForce));
+		StartCoroutine(StartCountdown(randTime));
 	}
 
-	void GetForces() {
-		xForce = Random.Range(150,240);
-		yForce = Random.Range(70,150);
+	void GetRandomValues() {
+		xForce = Random.Range(150,230);
+		yForce = Random.Range(110,170);
 		rotate = Random.Range(-35,35);
+		randTime = Random.Range(2.0f,6.0f);
+	}
+
+	public IEnumerator StartCountdown(float countdownValue)
+	{
+		float currCountdownValue = countdownValue;
+		while (currCountdownValue > 0)
+		{
+			yield return new WaitForSeconds(1.0f);
+			currCountdownValue--;
+		}
+		SpawnBottle();
 	}
 }
